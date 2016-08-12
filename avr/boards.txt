@@ -1,0 +1,40 @@
+menu.cpu=Processor
+
+##############################################################
+
+davinci.name=Da Vinci 32U
+
+davinci.vid.0=0x1774
+davinci.pid.0=0x0032
+davinci.vid.1=0x1774
+davinci.pid.1=0x8032
+#davinci.vid.2=0xfeed # ADB-USB adapter uses this
+#davinci.pid.2=0x0adb # ADB-USB adapter uses this
+
+davinci.upload.tool=avrdude
+davinci.upload.protocol=avr109
+davinci.upload.maximum_size=28672
+davinci.upload.maximum_data_size=2560
+davinci.upload.speed=57600
+davinci.upload.disable_flushing=true
+davinci.upload.use_1200bps_touch=true
+davinci.upload.wait_for_upload_port=true
+
+davinci.bootloader.low_fuses=0xff
+davinci.bootloader.high_fuses=0xd8
+davinci.bootloader.extended_fuses=0xcb
+davinci.bootloader.file=caterina/da-vinci-32u-master.hex
+davinci.bootloader.unlock_bits=0x3F
+davinci.bootloader.lock_bits=0x2F
+davinci.bootloader.tool=arduino:avrdude
+
+davinci.build.mcu=atmega32u4
+davinci.build.f_cpu=16000000L
+davinci.build.vid=0x1774
+davinci.build.pid=0x0032
+davinci.build.usb_product="Da Vinci 32U"
+davinci.build.board=AVR_DAVINCI
+davinci.build.core=arduino:arduino
+davinci.build.variant=leonardo
+davinci.build.usb_manufacturer="Strawberry Linux"
+davinci.build.extra_flags={build.usb_flags}
